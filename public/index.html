@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce Website with Payment</title>
+    <!-- link to css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Box Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <!-- Nav -->
+        <div class="nav container">
+            <!-- logo -->
+            <a href="#" class="logo">Alex.Shop</a>
+            <!-- cart icon -->
+            <i class='bx bxs-shopping-bag' id="cart-icon" data-quantity="0"></i>
+            <!-- cart -->
+            <div class="cart">
+                    <h2 class="cart-title">Your cart</h2>
+                    <!-- Content -->
+                    <div class="cart-content">
+                    </div>
+                    <!-- Total -->
+                    <div class="total">
+                        <div class="total-title">Total</div>
+                        <div class="total-price">$0</div>
+                    </div>
+                    <!-- Buy button -->
+                    <button type="button" class="btn-buy">Pay Now</button>
+                    <!-- Close Cart -->
+                    <i class='bx bx-x' id="close-cart"></i>
+            </div>
+        </div>
+    </header>
+    <!-- END -->
+
+    <!-- header bannder -->
+    <div class="header-banner">
+        <h2>"CHOOSE GREATNESS, CHOOSE JORDAN"</h2>
+    </div>
+    <!-- End -->
+
+    <!-- Products -->
+    <section class="shop container">
+        <h2 class="section-title">Featured Products</h2>
+        <!-- Shop Content -->
+        <div class="shop-content">
+            <!-- box 1 -->
+            <div class="product-box">
+                <!-- Need to upload images online to show it on stripe -->
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiMf7sS2pkNKAOSfbsMNGw_z3msunXZeUTlI-KV8UrDZYZF-3mneDpITEiWUAjUWMoBFRyUH4QMuvN2erxnWqzAAbWOgCjO-NieUNc4MdRScXrkja2rNnZtilTIwvH7s0A-hzEw2rf0gNn4mf6Che0Uc4nxB_rCP25G4TqKan0ZkpPQoTUZyWpg9ylS7dJH/s320/Nike-Product-1.jpg" alt="" class="product-img">
+                <h2 class="product-title">Jordan Flight Heritage
+                    Men's Fleece Sweatshirt</h2>
+                <span class="price">$195</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+            <!-- box 2 -->
+            <div class="product-box">
+                <!-- Need to upload images online to show it on stripe -->
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj-Jq8cJ4yfVJS4HbLRfeK7SUcjFDpJLNazHkzdn3igLu5As6zuMnyuwewNBpkyvbiflCByIBGHvp9N__60UoFN3yAbBjpeAXHraKlG4rJ8GiUc5plRqJEt075Q2e-yKPOTG-UR-Cpl8yNvB8pBWMjqM2RJYF34txwmB6BxJRcGHzcu8PyjeStBhA829rOn/s320/Nike%20Product%202.jpg" alt="" class="product-img">
+                <h2 class="product-title important">Nike Hoops Elite
+                    Backpack (32L)</h2>
+                <span class="price">$77</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+            <!-- box 3 -->
+            <div class="product-box">
+                <!-- Need to upload images online to show it on stripe -->
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjn9-1jlYd26Um3Yu_lKEqAom-Oq0aXoumXC3BR98cubuP5luthcIs_eUI7OtLEA8vBzi6YffGf5pc_54hVAf2gVpO6S8dpCbtqiP54wd_j0WWYRZ6_Khk7ojcYmTSN9rFLLrkgLZCqFa4lUjdqcwQpxyDSeJt63XceGLJ7oHWM6eQLSv__Vh9WWZSFsaO5/s320/Nike%20Product%203.jpg" alt="" class="product-img">
+                <h2 class="product-title">Jordan Golf Rise Cap
+                    Adjustable Structured Hat</h2>
+                <span class="price">$54.99</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+            <!-- box 4 -->
+            <div class="product-box">
+                <!-- Need to upload images online to show it on stripe -->
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhUxy-gKr2uhDZmPUjn82g4Iztv4cq-VDBg93PhbNcqFNveyEVDxyoY3WoIUqcAo_qMa_Z6L-SBPaWYHQa3DV8fO0_LWcGby-SZPl-Hg-y9hqZ0jb0XlW_9gNg-IZeYLEgYQepu19PQHGmY3nUL2YIBtqCjnhN5a49VhA7Vj8ymAilkNXtxU1TzfvrOKPmQ/s320/Nike-Product-4.jpg" alt="" class="product-img">
+                <h2 class="product-title important">Jordan Sport 85
+                    Men's Graphic T-Shirt</h2>
+                <span class="price">$131</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+            <!-- box 5 -->
+            <div class="product-box">
+                <!-- Need to upload images online to show it on stripe -->
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjaWJT99izhQ0edVEb1dORmfWKulJqzUY0BnjgmyHHMN4bBHv4MWESEjYvdYabSMTYMFDpj5UMqNifqVmTuyKl7Nf1vFIXuvgemV9bS4umWffT_EMfYejI4O3BojnT1OZUz1D-w5kLrjtb5Gz_od8kNSqCXANVNrarWGdrKTJO9F_2i43bbxgTw-mHT3211/s320/Nike-Product-5.jpg" alt="" class="product-img">
+                <h2 class="product-title">Jordan Flight MVP
+                    Men's Fleece Pullover Hoodie</h2>
+                <span class="price">$170</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+            <!-- box 6 -->
+            <div class="product-box">
+                <!-- Need to upload images online to show it on stripe -->
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjeYzektN01Y1gBfShjI0FiE-Z2iVrvTJTyUWiH4JQ0F7c0gkMzP6WkNiAXgLp_llrTAenhwP7wS1UJ2lw4uGzsKtaewntqnam7tHZVidWu7XA-0-DC6WPRPiVenJ7OMvEwAaqe-sbXrBbtUfqn5th8A7wtE-QeHto62vOE88U-sIQm-Zap3KqF28r7iL_D/s320/Nike%20Product%206.jpg" alt="" class="product-img">
+                <h2 class="product-title important">Nike Marquee Edge
+                    Sunglasses</h2>
+                <span class="price">$155</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+            <!-- box 7 -->
+            <div class="product-box">
+                <!-- Need to upload images online to show it on stripe -->
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiBzyC7WwwCoG08lrcGrScgBKlelp4o79e2GJdo6p4Aav6VLpws2z-XOqLBg0iN_aGxC4HbxkYJa6bnxvcCQlxnW7qktM7ngTPoZGOx6uhtQirrdAHsxWhL_JPPQ75zrMFw5BwfPEjG8as1S-rfOsAZ3KD_bS0srmyZORUoSd9HA2dhJqpjLcWd0lVYFm_G/s320/Nike-Product-7.jpg" alt="" class="product-img">
+                <h2 class="product-title">Nike Recharge
+                    Stainless Steel Chug Bottle (24 oz)</h2>
+                <span class="price">$36</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+            <!-- box 8 -->
+            <div class="product-box">
+                <!-- Need to upload images online to show it on stripe -->
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh2hyq5_Y3v_8Y_5lkOfhs5T94J20n8q7PwYe21OHQRlJBnApkUBDFa8dR6Z222m7rFU2CHGHqP9tbyZ3IaaKwwUFNIbaEQ1NB4YqAq6Ynvk8e2W-22JYGIhr45kcSx9M8oQGU2cQE0XXcmJgAXyXYSQNKwcTOFgLLHBIDmfNkoFu3wUeQNXVOszSAJq0z8/s320/Nike-Product-8.jpg" alt="" class="product-img">
+                <h2 class="product-title">Nike Pegasus 40 SE
+                    Men's Road Running Shoes</h2>
+                <span class="price">$130</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+        </div>
+    </section>
+    <!-- END -->
+
+    <!-- link to JS -->
+    <script src="script/script.js"></script>
+    <script src="script/cart.js"></script>
+</body>
+</html>
