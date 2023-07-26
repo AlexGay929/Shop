@@ -5,11 +5,11 @@ let closeCart = document.querySelector('#close-cart');
 
 // Open Cart
 cartIcon.onclick = () => {
-    cart.classList.add('active')
+    cart.classList.add('active');
 }
 // Close Cart
 closeCart.onclick = () => {
-    cart.classList.remove('active')
+    cart.classList.remove('active');
 }
 
 // Making Add to Cart
@@ -123,6 +123,7 @@ function updatetotal() {
     // if price contain some cents 
     total = Math.round(total * 100) / 100;
     document.getElementsByClassName('total-price')[0].innerText = "$" + total;
+    console.log(total)
     // Save Total to localstorage
     localStorage.setItem('cartTotal', total);
 }
